@@ -13,11 +13,11 @@
     <div id="app">
         <div id="bobrContainer">
             <img src="sourses/bobr.png" alt="Бобр">
-            <button v-on:click="isActive = true;">{{buttonText}}</button>
+            <button v-on:click="isActive = true; toBeSurprised">{{buttonText}}</button>
         </div>
 
         <div id="polandContainer" class="none" v-bind:class="{polandContainer: isActive}">
-            <p>BÓBR! JA PERDOLE!</p>
+            <p>{{greetingTheBeaver}}</p>
             <img src="sourses/poland.png" alt="Поляк">
         </div>
     </div>
@@ -28,8 +28,14 @@
             data(){
                 return {
                     buttonText: "Позвать поляка",
+                    greetingTheBeaver: "BÓBR! JA PERDOLE!",
                     isActive: false,
                 }
+            },
+            computed:{
+                toBeSurprised: function(){
+                    this.buttonText = "O KURWA";
+                },
             },
             methods:{
 
