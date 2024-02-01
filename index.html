@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="sourses/logo.png" type="image/x-icon">
+    <title>Vue3</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <div id="app">
+        <div id="bobrContainer">
+            <img src="sourses/bobr.png" alt="Бобр">
+            <button v-on:click="isActive = true;">{{buttonText}}</button>
+        </div>
+
+        <div id="polandContainer" class="none" v-bind:class="{polandContainer: isActive}">
+            <p>BÓBR! JA PERDOLE!</p>
+            <img src="sourses/poland.png" alt="Поляк">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    buttonText: "Позвать поляка",
+                    isActive: false,
+                }
+            },
+            methods:{
+
+            },
+        }).mount("#app");
+    </script>
+</body>
+
+</html>
