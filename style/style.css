@@ -9,7 +9,7 @@
 #bobrContainer{
     width: 100%;
     max-width: 512px;
-    margin-bottom: 32px;
+    margin: 0 auto 32px;
 }
 #bobrContainer > img{
     display: block;
@@ -30,7 +30,7 @@
 
 .polandContainer{
     display: block;
-    margin: 32px 0 0;
+    margin: 0 auto;
     width: 100%;
     max-width: 512px;
 }

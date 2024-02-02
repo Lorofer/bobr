@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="sourses/logo.png" type="image/x-icon">
-    <title>Vue3</title>
+    <link rel="shortcut icon" href="sourses/beaver-icon.png" type="image/x-icon">
+    <title>BÓBR</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -23,30 +23,7 @@
     </div>
 
     <script src="https://unpkg.com/vue"></script>
-    <script>
-        Vue.createApp({
-            data(){
-                return {
-                    buttonText: "Позвать поляка",
-                    greetingTheBeaver: "BÓBR! JA PERDOLE!",
-                    isActive: false,
-                }
-            },
-            computed:{
-                changingTheLabel: function(){
-                    if(!this.isActive){
-                        this.buttonText = "Позвать поляка";
-                    }
-                    else{
-                        this.buttonText = "O KURWA";
-                    }
-                },
-            },
-            methods:{
-
-            },
-        }).mount("#app");
-    </script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
